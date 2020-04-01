@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.infs3605financialliteracy.R;
+import com.firebase.ui.auth.data.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //Fetch text from boxes
-                String newEmail = email.getText().toString();
+                final String newEmail = email.getText().toString();
                 String newPassword = password.getText().toString();
 
                 //If the fields are empty
@@ -66,12 +67,17 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
-                                Toast.makeText(MainActivity.this, "Unsuccessful, Please make sure your email address is valid.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Sign Up Unsuccessful. Possible issues may include \n" +
+                                        "invalid email address or pre-existing account.", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 mFirebaseUser = mFirebaseAuth.getCurrentUser();
                                 Toast.makeText(MainActivity.this, "Registration Successful, Welcome!", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+
+                                Intent i = new Intent(MainActivity.this, UserDataActivity.class);
+                                i.putExtra("EMAIL_PREFILL", newEmail);
+                                startActivity(i);
+                                finish();
                             }
                         }
                     });

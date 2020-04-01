@@ -76,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                             else {
                                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                finish();
                             }
                         }
                     });
@@ -109,7 +110,6 @@ public class LoginActivity extends AppCompatActivity {
     //Shows message if the user is already logged in
     public void showDialog(){
         ActiveUserDialog activeUserDialog = new ActiveUserDialog();
-
         activeUserDialog.show(getSupportFragmentManager(), "");
     }
 }

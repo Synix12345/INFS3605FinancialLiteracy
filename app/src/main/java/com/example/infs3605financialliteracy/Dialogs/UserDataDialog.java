@@ -11,34 +11,23 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.example.infs3605financialliteracy.Activities.HomeActivity;
-import com.example.infs3605financialliteracy.Activities.MainActivity;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class ActiveUserDialog extends AppCompatDialogFragment {
-
+public class UserDataDialog extends AppCompatDialogFragment {
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        builder.setMessage("You are already logged in! Would you like to move to the homepage?");
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
+        builder.setMessage("Hi there, Welcome to ____, We're glad to have a new user on board!" +
+                "\n" +
+                "To get started, please fill in some basic information that will help us build your profile!");
 
-            }
-        });
-        builder.setPositiveButton("Go", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent i = new Intent(getContext(), HomeActivity.class);
-                startActivity(i);
             }
         });
         return builder.create();
     }
-
-
 }
