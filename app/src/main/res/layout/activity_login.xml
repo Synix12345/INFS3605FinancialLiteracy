@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MainActivity">
+    tools:context=".Activities.LoginActivity">
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/useremail"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="99dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/userpassword"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="99dp"
@@ -32,49 +32,50 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/useremail" />
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/usersignin"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:text="Sign Up"
-        android:textColor="@color/colorWHITE"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Sign In"
+        android:textColor="@color/colorPrimaryLight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/userpassword" />
 
     <TextView
-        android:id="@+id/signintext"
+        android:id="@+id/usersignuptext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginTop="20dp"
-        android:text="Already a user?"
+        android:text="Don't have an account yet?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup" />
+        app:layout_constraintTop_toBottomOf="@+id/usersignin" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="116dp"
+        android:layout_width="120dp"
         android:layout_height="110dp"
         android:layout_marginBottom="20dp"
         android:src="@drawable/firebaselogo"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/useremail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="Sign In Here!"
-        android:textColor="@color/colorPrimaryLight"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Register Now!"
+        android:textColor="@color/colorWHITE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signintext" />
+        app:layout_constraintTop_toBottomOf="@+id/usersignuptext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

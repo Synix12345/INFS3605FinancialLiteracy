@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "354279233832",
+    "firebase_url": "https://infs3605-financialliteracyapp.firebaseio.com",
+    "project_id": "infs3605-financialliteracyapp",
+    "storage_bucket": "infs3605-financialliteracyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354279233832:android:83387d98344e90817f181d",
+        "android_client_info": {
+          "package_name": "com.example.infs3605financialliteracy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354279233832-nncaj399h8vt4k1j8fm97f0d3f1td6hd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.infs3605financialliteracy",
+            "certificate_hash": "9ce040e457f4d61aa68de3041690ca4512e1ab95"
+          }
+        },
+        {
+          "client_id": "354279233832-b98gposc3fg2l6rqa9l3glb35ffnd46o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALiqw521ldXHC3oLcf-Pl26f4GZ6Uuwsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354279233832-b98gposc3fg2l6rqa9l3glb35ffnd46o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
