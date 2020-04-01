@@ -11,9 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.example.infs3605financialliteracy.Activities.HomeActivity;
-import com.example.infs3605financialliteracy.Activities.MainActivity;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.example.infs3605financialliteracy.Activities.SignUpActivity;
 
 public class ActiveUserDialog extends AppCompatDialogFragment {
 
@@ -24,10 +22,13 @@ public class ActiveUserDialog extends AppCompatDialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         builder.setMessage("You are already logged in! Would you like to move to the homepage?");
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Sign Out", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                Intent i = new Intent(getContext(), SignUpActivity.class);
+                i.putExtra("SIGN_OUT_REQUEST", "1");
+                startActivity(i);
+                getActivity().finish();
             }
         });
         builder.setPositiveButton("Go", new DialogInterface.OnClickListener() {

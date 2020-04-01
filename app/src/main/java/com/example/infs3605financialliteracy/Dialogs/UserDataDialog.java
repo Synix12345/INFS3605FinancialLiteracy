@@ -19,8 +19,8 @@ public class UserDataDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        builder.setMessage("Hi there, Welcome to ____, We're glad to have a new user on board!" +
-                "\n" +
+        builder.setMessage("Welcome to FL Simulated Banking!, We hope you enjoy the app!" +
+                "\n \n"  +
                 "To get started, please fill in some basic information that will help us build your profile!");
 
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

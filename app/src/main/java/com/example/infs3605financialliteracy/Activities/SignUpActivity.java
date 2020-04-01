@@ -8,11 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.infs3605financialliteracy.R;
-import com.firebase.ui.auth.data.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -20,25 +18,28 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-public class MainActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
     public EditText email, password;
     public Button signup;
     public Button signin;
     FirebaseAuth mFirebaseAuth;
-    FirebaseUser mFirebaseUser;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);;
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        int activeUserdefaulting = getIntent().getIntExtra("SIGN_OUT_REQUEST", 1);
+        if (activeUserdefaulting == 1){
+            mFirebaseAuth.signOut();
+        }
 
         //Handles
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         signin = findViewById(R.id.login);
         signup = findViewById(R.id.signup);
-        mFirebaseAuth = FirebaseAuth.getInstance();
 
 
         //New user sign up
@@ -60,21 +61,20 @@ public class MainActivity extends AppCompatActivity {
                     password.requestFocus();
                 }
                 else if (newEmail.isEmpty() &&  newPassword.isEmpty()){
-                    Toast.makeText(MainActivity.this, "Please fill in both fields!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Please fill in both fields!", Toast.LENGTH_SHORT).show();
                 }
                 else if (!(newEmail.isEmpty()  && newPassword.isEmpty())){
-                    mFirebaseAuth.createUserWithEmailAndPassword(newEmail,newPassword).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    mFirebaseAuth.createUserWithEmailAndPassword(newEmail,newPassword).addOnCompleteListener(SignUpActivity.this,
+                            new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
-                                Toast.makeText(MainActivity.this, "Sign Up Unsuccessful. Possible issues may include \n" +
-                                        "invalid email address or pre-existing account.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this,
+                                        "Sign Up Unsuccessful. Possible issues may include invalid email address or pre-existing account.",
+                                        Toast.LENGTH_LONG).show();
                             }
                             else {
-                                mFirebaseUser = mFirebaseAuth.getCurrentUser();
-                                Toast.makeText(MainActivity.this, "Registration Successful, Welcome!", Toast.LENGTH_SHORT).show();
-
-                                Intent i = new Intent(MainActivity.this, UserDataActivity.class);
+                                Intent i = new Intent(SignUpActivity.this, UserDataActivity.class);
                                 i.putExtra("EMAIL_PREFILL", newEmail);
                                 startActivity(i);
                                 finish();
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Error occurred!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Error occurred! Please try again.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

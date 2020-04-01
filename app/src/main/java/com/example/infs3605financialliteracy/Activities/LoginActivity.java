@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.infs3605financialliteracy.Dialogs.ActiveUserDialog;
@@ -72,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
                                 Toast.makeText(LoginActivity.this,
-                                        "Sign-in Unsuccessful, Please check input fields or try again later.", Toast.LENGTH_SHORT).show();
+                                        "Sign-in failed. Please check email or password.", Toast.LENGTH_LONG).show();
                             }
                             else {
                                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
@@ -91,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
                 startActivity(intent);
             }
         });
