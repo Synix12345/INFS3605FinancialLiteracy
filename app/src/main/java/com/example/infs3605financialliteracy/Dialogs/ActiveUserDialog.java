@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.example.infs3605financialliteracy.Activities.HomeActivity;
+import com.example.infs3605financialliteracy.Activities.LoginActivity;
 import com.example.infs3605financialliteracy.Activities.SignUpActivity;
 
 public class ActiveUserDialog extends AppCompatDialogFragment {
@@ -25,7 +26,7 @@ public class ActiveUserDialog extends AppCompatDialogFragment {
         builder.setNegativeButton("Sign Out", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent i = new Intent(getContext(), SignUpActivity.class);
+                Intent i = new Intent(getContext(), LoginActivity.class);
                 i.putExtra("SIGN_OUT_REQUEST", "1");
                 startActivity(i);
                 getActivity().finish();
