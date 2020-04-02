@@ -14,13 +14,14 @@ import com.example.infs3605financialliteracy.Activities.QuizActivity;
 import com.example.infs3605financialliteracy.R;
 
 public class QuizFragment extends Fragment {
-
     Button quiz1;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.quiz_fragment, container, false);
 
         quiz1 = view.findViewById(R.id.quiz1);
+
         quiz1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -29,7 +30,6 @@ public class QuizFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
         return view;
     }
 }
