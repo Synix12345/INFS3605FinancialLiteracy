@@ -4,22 +4,23 @@
     <item
         android:id="@+id/virtual"
         android:enabled="true"
-        android:title="Virtual Forecast"
-        android:icon="@drawable/icon_search"
+        android:title="Forecast"
+        android:textStyle="bold"
+        android:icon="@drawable/graph"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/quiz"
         android:enabled="true"
         android:title="Quiz Me"
-        android:icon="@drawable/icon_search"
+        android:icon="@drawable/icon_quiz"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/study"
         android:enabled="true"
         android:title="Study"
-        android:icon="@drawable/icon_search"
+        android:icon="@drawable/icon_study"
         app:showAsAction="ifRoom" />
 
 </menu>

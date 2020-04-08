@@ -60,17 +60,20 @@ public class HomeActivity extends AppCompatActivity {
         final QuizFragment quizFragment = new QuizFragment();
         final StudyFragment studyFragment = new StudyFragment();
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_bar);
+        final BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_bar);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.virtual){
+                    bottomNavigationView.setItemBackgroundResource(R.color.colorLightBlue);
                     swapFragment(simulationFragment);
                 }
                 else if (menuItem.getItemId() == R.id.quiz){
+                    bottomNavigationView.setItemBackgroundResource(R.color.colorLightRed);
                     swapFragment(quizFragment);
                 }
                 else if (menuItem.getItemId() == R.id.study){
+                    bottomNavigationView.setItemBackgroundResource(R.color.colorLightGreen);
                     swapFragment(studyFragment);
                 }
                 return true;
