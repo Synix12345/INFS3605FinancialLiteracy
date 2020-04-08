@@ -4,20 +4,19 @@ public class Questions {
 
     public String mQuestions[] = {
             "Sample test question, answer is b",
-            "Second sample test question, answer is c"
+            "What is the superannuation concessional contribution cap for the 2019 financial year?"
     };
 
     private String mChoices[][] = {
-            {"Apple","B","Carrot","Awake"},
-            {"Alien","Music","C","Cat"}
+            {"A","B","C","D"},
+            {"$30,000","$25,500","$25,000","$30,500"}
     };
 
-    private String mCorrectAnswers[] = {"B","C"};
+    private String mCorrectAnswers[] = {"B","$25,000"};
 
     public String getQuestion(int a) {
         String question = mQuestions[a];
         return question;
-
     }
 
     public String getChoice1(int a) {
