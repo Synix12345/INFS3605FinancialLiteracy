@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
                 mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null){
                     mFirebaseAuth.signOut();
-                    startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                    startActivity(new Intent(HomeActivity.this, SignUpActivity.class));
                     finish();
                 }
                 else {
