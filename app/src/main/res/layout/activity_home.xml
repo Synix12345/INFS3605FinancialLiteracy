@@ -14,7 +14,7 @@
         android:layout_marginTop="328dp"
         android:layout_marginEnd="171dp"
         android:layout_marginBottom="384dp"
-        android:text="Welcome, you are logged in.\nThis is where the home page should be."
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:itemTextColor="#EEFFFF"
-        android:background="#0D5889"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
