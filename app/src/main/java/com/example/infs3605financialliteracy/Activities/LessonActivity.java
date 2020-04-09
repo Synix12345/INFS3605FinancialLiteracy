@@ -1,7 +1,10 @@
 package com.example.infs3605financialliteracy.Activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.infs3605financialliteracy.R;
@@ -12,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LessonActivity extends AppCompatActivity {
 
     TextView textView;
+    Button btnVid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,7 @@ public class LessonActivity extends AppCompatActivity {
 
 
         textView = findViewById(R.id.tv_info);
+        btnVid = findViewById(R.id.btn_vid);
 
         switch (lessonnumber){
             case 0:
@@ -46,6 +51,15 @@ public class LessonActivity extends AppCompatActivity {
                 break;
 
         }
+
+        btnVid.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Context context = v.getContext();
+                Intent intent = new Intent(context, YouTubeActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
 
 
