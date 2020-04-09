@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F2A33A</color>
-    <color name="colorPrimaryDark">#EE772F</color>
-    <color name="colorPrimaryLight">#F7C543</color>
-    <color name="colorAccent">#3458B6</color>
+
+    //Olive Green Palette
+    <color name="colorPrimary">#688C4C</color>
+    <color name="colorPrimaryDark">#3C5148</color>
+    <color name="colorPrimaryLight">#FFFFFF</color>
+    <color name="colorAccent">#192727</color>
+
+
+
     <color name="colorWHITE">#FFFFFF</color>
     <color name="colorLightBlue"> #2190FF </color>
     <color name="colorLightRed">#EA4F4C</color>

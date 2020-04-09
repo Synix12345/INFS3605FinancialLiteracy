@@ -25,7 +25,6 @@ public class HomeActivity extends AppCompatActivity {
 
     public Button signout;
     FirebaseAuth mFirebaseAuth;
-    private FirebaseAuth.AuthStateListener mAuthStateListener;
     FirebaseUser mFirebaseUser;
 
     @Override
@@ -65,15 +64,15 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.virtual){
-                    bottomNavigationView.setItemBackgroundResource(R.color.colorLightBlue);
+                    bottomNavigationView.setItemBackgroundResource(R.color.colorPrimaryDark);
                     swapFragment(simulationFragment);
                 }
                 else if (menuItem.getItemId() == R.id.quiz){
-                    bottomNavigationView.setItemBackgroundResource(R.color.colorLightRed);
+                    bottomNavigationView.setItemBackgroundResource(R.color.colorPrimaryDark);
                     swapFragment(quizFragment);
                 }
                 else if (menuItem.getItemId() == R.id.study){
-                    bottomNavigationView.setItemBackgroundResource(R.color.colorLightGreen);
+                    bottomNavigationView.setItemBackgroundResource(R.color.colorPrimaryDark);
                     swapFragment(studyFragment);
                 }
                 return true;
