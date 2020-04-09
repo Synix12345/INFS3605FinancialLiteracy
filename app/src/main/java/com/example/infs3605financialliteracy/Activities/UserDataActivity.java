@@ -103,7 +103,7 @@ public class UserDataActivity extends AppCompatActivity {
             username.requestFocus();
         }
         else {
-            String id = databaseUsers.push().getKey();
+            String id = mFirebaseAuth.getCurrentUser().getUid();
             user = new User(e,uname,fname,lname,gender,id);
             databaseUsers.child(id).setValue(user);
         }
