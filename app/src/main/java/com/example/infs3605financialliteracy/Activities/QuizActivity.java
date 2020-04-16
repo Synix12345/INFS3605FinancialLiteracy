@@ -111,7 +111,7 @@ public class QuizActivity extends AppCompatActivity {
 
         private void testOver() {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(QuizActivity.this);
-            alertDialogBuilder.setMessage("Test over. Your current score is " + mScore + " points.").setCancelable(false)
+            alertDialogBuilder.setMessage("Incorrect. Your current score is " + mScore + " points.").setCancelable(false)
                     .setPositiveButton("NEW TEST", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int i) {
