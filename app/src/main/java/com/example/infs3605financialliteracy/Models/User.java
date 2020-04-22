@@ -1,8 +1,6 @@
 package com.example.infs3605financialliteracy.Models;
 
 public class User {
-
-    //Basics
     private String id;
     private String email;
     private String username;

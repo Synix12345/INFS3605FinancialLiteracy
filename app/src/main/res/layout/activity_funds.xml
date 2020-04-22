@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Activities.FundsActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="25dp"
+        android:text="Funds Editor"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintTop_toTopOf="parent"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="You can freely edit your current account balance.\nYour current funds total is:"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/balanceToChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="..."
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Input your new desired balance below:"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/balanceToChange" />
+
+    <EditText
+        android:id="@+id/newBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv3"
+        android:layout_marginTop="20dp"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:textSize="25dp"
+        android:hint="Enter Here"
+        android:textColor="@color/colorPrimaryLight"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorHighlight="@color/colorPrimaryLight"
+        />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/newBalance"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryLight"
+
+        android:text="Confirm"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
