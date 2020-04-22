@@ -7,11 +7,13 @@
     <color name="colorPrimaryLight">#FFFFFF</color>
     <color name="colorGrey">#f2f2f2</color>
     <color name="colorAccent">#192727</color>
+    <color name="colorOlive">#bab86c</color>
+    <color name="colorLightGreen">#5DCC9C</color>
+
 
 
 
     <color name="colorWHITE">#FFFFFF</color>
     <color name="colorLightBlue"> #2190FF </color>
     <color name="colorLightRed">#EA4F4C</color>
-    <color name="colorLightGreen"> #52B849 </color>
 </resources>

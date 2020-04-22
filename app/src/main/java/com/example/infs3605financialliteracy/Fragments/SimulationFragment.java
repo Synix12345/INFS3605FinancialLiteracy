@@ -46,6 +46,7 @@ public class SimulationFragment extends Fragment {
     private DatabaseReference dbusers;
     private String userId;
     private Button editfunds;
+    private Button simulations;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.simulation_fragment, container, false);
@@ -85,6 +86,13 @@ public class SimulationFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), FundsActivity.class));
+            }
+        });
+
+        simulations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
