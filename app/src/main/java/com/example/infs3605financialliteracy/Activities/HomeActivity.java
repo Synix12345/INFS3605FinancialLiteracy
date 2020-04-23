@@ -2,13 +2,19 @@ package com.example.infs3605financialliteracy.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.drm.DrmStore;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import androidx.appcompat.widget.Toolbar;
 
 
 import com.example.infs3605financialliteracy.Fragments.QuizFragment;
@@ -16,10 +22,11 @@ import com.example.infs3605financialliteracy.R;
 import com.example.infs3605financialliteracy.Fragments.SimulationFragment;
 import com.example.infs3605financialliteracy.Fragments.StudyFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 
-
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,37 +35,54 @@ public class HomeActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        //The navigation bar at the bottom
-        final SimulationFragment simulationFragment = new SimulationFragment();
-        final QuizFragment quizFragment = new QuizFragment();
-        final StudyFragment studyFragment = new StudyFragment();
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
-        //Default Fragment to display
-        swapFragment(simulationFragment);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
 
-        final BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_bar);
-        bottomNavigationView.setItemBackgroundResource(R.color.colorGrey);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                if (menuItem.getItemId() == R.id.virtual){
-                    swapFragment(simulationFragment);
-                }
-                else if (menuItem.getItemId() == R.id.quiz){
-                    swapFragment(quizFragment);
-                }
-                else if (menuItem.getItemId() == R.id.study){
-                    swapFragment(studyFragment);
-                }
-                return true;
-            }
-        });
+        drawer = findViewById(R.id.drawer_layout);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentSlot,
+                    new SimulationFragment()).commit();
+            navigationView.setCheckedItem(R.id.virtual);
+        }
+
     }
-    private void swapFragment(Fragment fragment){
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentSlot, fragment);
-        fragmentTransaction.commit();
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.quiz:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentSlot,
+                        new QuizFragment()).commit();
+                break;
+            case R.id.study:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentSlot,
+                        new StudyFragment()).commit();
+                break;
+            case R.id.virtual:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentSlot,
+                        new SimulationFragment()).commit();
+                break;
+        }
+
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 }

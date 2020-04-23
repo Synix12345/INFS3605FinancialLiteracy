@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <group android:checkableBehavior="single">
     <item
         android:id="@+id/virtual"
-        android:enabled="true"
         android:title="Forecast"
         android:textStyle="bold"
         android:icon="@drawable/graph"
-        app:showAsAction="ifRoom" />
+        />
 
     <item
         android:id="@+id/quiz"
-        android:enabled="true"
         android:title="Quiz Me"
         android:icon="@drawable/icon_quiz"
-        app:showAsAction="ifRoom" />
+        />
 
     <item
         android:id="@+id/study"
-        android:enabled="true"
         android:title="Study"
         android:icon="@drawable/icon_study"
-        app:showAsAction="ifRoom" />
-
+         />
+    </group>
 </menu>
