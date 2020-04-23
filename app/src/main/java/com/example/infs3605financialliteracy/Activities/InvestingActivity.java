@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.example.infs3605financialliteracy.R;
 
+import java.text.DecimalFormat;
+
 public class InvestingActivity extends AppCompatActivity {
 
     EditText Tstartingbalance;
@@ -21,6 +23,7 @@ public class InvestingActivity extends AppCompatActivity {
     Button calcbutton;
     double startingbalance,interestrate,monthlysavings,endingbalance,interestPrinciple,futurevalue;
     int years;
+    private static DecimalFormat df2 = new DecimalFormat("#.##");
 
 
     @Override
@@ -35,6 +38,7 @@ public class InvestingActivity extends AppCompatActivity {
         Tinterestrate=findViewById(R.id.intrate);
         Tmonthlysavings=findViewById(R.id.monthlysavings);
         Tendingbalance=findViewById(R.id.endingbalance);
+
 
         calcbutton=findViewById(R.id.btn_calc);
         calcbutton.setOnClickListener((new View.OnClickListener(){
@@ -54,9 +58,8 @@ public class InvestingActivity extends AppCompatActivity {
 
                 endingbalance=futurevalue+interestPrinciple;
 
-                String stringdouble = Double.toString(endingbalance);
 
-                Tendingbalance.setText(stringdouble);
+                Tendingbalance.setText(String.format("%.2f", endingbalance));
 
             }
 
