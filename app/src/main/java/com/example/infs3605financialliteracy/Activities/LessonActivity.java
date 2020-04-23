@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.infs3605financialliteracy.R;
+import com.example.infs3605financialliteracy.Activities.YouTubeActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -44,6 +45,7 @@ public class LessonActivity extends AppCompatActivity {
                         "Compare your fund's investment performance over at least five years. Consider the impact of fees and tax.\n" +
                         "\n" +
                         "Compare like with like. For example, only compare a balanced option with another balanced option, and try to use the same time period.\n");
+                YouTubeActivity.YOUTUBE_VIDEO = "2xYq9CDqiXE";
                 break;
             case 1:
                 textView.setText("Interest rates on savings accounts are at record lows these days, so you’ll be hard pressed to find an interest rate that’s permanently above 3% per annum.\n" +
@@ -106,9 +108,11 @@ public class LessonActivity extends AppCompatActivity {
                                 "A lot of these fees are quite minor (often no more than a few dollars at most), but can be irritating if you’re trying to save money with your savings account."
 
                         );
+                YouTubeActivity.YOUTUBE_VIDEO = "jY3_w3bwt3M";
                 break;
             case 2:
                 textView.setText("Testing 2");
+                YouTubeActivity.YOUTUBE_VIDEO = "jY3_w3bwt3M";
                 break;
 
         }

@@ -2,6 +2,7 @@ package com.example.infs3605financialliteracy.Activities;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -12,18 +13,22 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+//code accessed from Tim Buchalka's Android Course
+
 public class YouTubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     static final String GOOGLE_API_KEY = "AIzaSyC9obbACQubT7_TygqQI4KsTz3S3mDw57Y";
-    static final String YOUTUBE_VIDEO = "2xYq9CDqiXE" ;
+    static String YOUTUBE_VIDEO;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         ConstraintLayout layout = (ConstraintLayout) getLayoutInflater().inflate(R.layout.activity_you_tube, null);
         setContentView(layout);
+
 
         YouTubePlayerView playerView = new YouTubePlayerView(this);
         playerView.setLayoutParams(new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
