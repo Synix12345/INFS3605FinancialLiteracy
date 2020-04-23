@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -45,7 +46,6 @@ public class SavingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_savings);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        showDialog();
 
 
         //Handles
@@ -59,10 +59,9 @@ public class SavingsActivity extends AppCompatActivity {
         currBal = findViewById(R.id.mainbalance);
 
 
-
-        //dummy data
-        accountList.add(new SavingsAccount("1","Progressive Saver", 125.40));
-        accountList.add(new SavingsAccount("2", "Online Saver", 400.10));
+        //Dummy data
+        accountList.add(new SavingsAccount("1", "Progress Savers", 250.50));
+        accountList.add(new SavingsAccount("2", "Vacation Acc", 750.45));
 
         //Layout manager
         layoutManager = new LinearLayoutManager(this);
@@ -76,7 +75,7 @@ public class SavingsActivity extends AppCompatActivity {
         addAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(SavingsActivity.this, NewAccountActivity.class));
             }
         });
 
