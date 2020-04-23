@@ -2,42 +2,53 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/colorPrimaryLight"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/accounticon"
-        android:layout_width="95dp"
+        android:layout_width="110dp"
         android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/cardicon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/accountname"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="25dp"
+        android:src="@drawable/cardicon2"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/accountname"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/accounticon"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
         android:text="Account name"
-        app:layout_constraintEnd_toStartOf="@id/accountbalance"
-        />
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/accounticon"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/accountbalance"
         android:layout_width="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Balance"
-        android:layout_marginTop="40dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/accountname"
+        android:layout_marginTop="50dp"
+        android:text="Balance"
+        android:textSize="15dp"
+        android:layout_marginRight="60dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
+    <View
+        android:id="@+id/divider"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="?android:attr/listDivider"
+     />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

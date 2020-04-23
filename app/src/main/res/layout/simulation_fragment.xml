@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/darkgreengradient"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageButton
@@ -81,10 +81,11 @@
 
     <Button
         android:id="@+id/simulations"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="60dp"
         android:text="Simulations"
-        android:backgroundTint="@color/colorLightGreen"
+        android:textColor="@color/colorPrimaryLight"
+        android:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"

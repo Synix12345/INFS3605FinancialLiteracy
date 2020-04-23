@@ -1,7 +1,10 @@
 package com.example.infs3605financialliteracy.Models;
 
 
+import android.widget.ImageView;
+
 public class SavingsAccount {
+    private ImageView icon;
     private double balance;
     private String name;
     private String id;
@@ -34,5 +37,13 @@ public class SavingsAccount {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public ImageView getIcon() {
+        return icon;
+    }
+
+    public void setIcon(ImageView icon) {
+        this.icon = icon;
     }
 }
