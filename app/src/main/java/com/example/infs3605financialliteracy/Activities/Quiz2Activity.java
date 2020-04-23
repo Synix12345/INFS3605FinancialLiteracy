@@ -9,17 +9,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.infs3605financialliteracy.Quiz.Questions;
+import com.example.infs3605financialliteracy.Quiz.QuestionsQ2;
 import com.example.infs3605financialliteracy.R;
 
 import java.util.Random;
 
-public class QuizActivity extends AppCompatActivity {
+public class Quiz2Activity extends AppCompatActivity {
 
     Button answer1, answer2, answer3, answer4;
     TextView score, question;
-    private Questions mQuestions = new Questions();
+    private QuestionsQ2 mQuestions = new QuestionsQ2();
     private String mAnswer;
     private int mScore = 0;
     private int mQuestionLength = mQuestions.mQuestions.length;
@@ -29,7 +28,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_quiz1);
 
         r = new Random();
 
@@ -100,33 +99,33 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-        private void updateQuestion(int num) {
-            question.setText(mQuestions.getQuestion(num));
-            answer1.setText(mQuestions.getChoice1(num));
-            answer2.setText(mQuestions.getChoice2(num));
-            answer3.setText(mQuestions.getChoice3(num));
-            answer4.setText(mQuestions.getChoice4(num));
-            mAnswer = mQuestions.getCorrectAnswer(num);
-        }
-
-        private void testOver() {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(QuizActivity.this);
-            alertDialogBuilder.setMessage("Incorrect. Your final score was " + mScore + " points.").setCancelable(false)
-                    .setPositiveButton("NEW TEST", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            startActivity(new Intent(getApplicationContext(), QuizActivity.class));
-                            finish();
-                        }
-                    })
-                    .setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            finish();
-                        }
-                    });
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-        }
+    private void updateQuestion(int num) {
+        question.setText(mQuestions.getQuestion(num));
+        answer1.setText(mQuestions.getChoice1(num));
+        answer2.setText(mQuestions.getChoice2(num));
+        answer3.setText(mQuestions.getChoice3(num));
+        answer4.setText(mQuestions.getChoice4(num));
+        mAnswer = mQuestions.getCorrectAnswer(num);
     }
+
+    private void testOver() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Quiz2Activity.this);
+        alertDialogBuilder.setMessage("Incorrect. Your final score was " + mScore + " points.").setCancelable(false)
+                .setPositiveButton("NEW TEST", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        startActivity(new Intent(getApplicationContext(), Quiz1Activity.class));
+                        finish();
+                    }
+                })
+                .setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        finish();
+                    }
+                });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
+}
 

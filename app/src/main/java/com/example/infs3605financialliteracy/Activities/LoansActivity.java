@@ -62,7 +62,7 @@ public class LoansActivity extends AppCompatActivity {
 
                 double M = Math.round((P*(i * interestLength)/(interestLength-1))*100.0)/100.0;
                 double Interest = Math.round((M*n-P));
-                double Total = M * n;
+                double Total = Math.round(M * n);
 
                 totalAmount.setText(String.valueOf(M));
                 interestPayable.setText(String.valueOf(Interest));

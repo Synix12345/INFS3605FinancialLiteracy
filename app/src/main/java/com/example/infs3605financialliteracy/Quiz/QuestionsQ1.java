@@ -1,6 +1,6 @@
 package com.example.infs3605financialliteracy.Quiz;
 
-public class Questions {
+public class QuestionsQ1 {
 
     public String mQuestions[] = {
             "Which of the following statements is correct?",
