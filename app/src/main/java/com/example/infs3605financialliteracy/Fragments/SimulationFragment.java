@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.example.infs3605financialliteracy.Activities.FundsActivity;
 import com.example.infs3605financialliteracy.Activities.HomeActivity;
 import com.example.infs3605financialliteracy.Activities.ProfileActivity;
+import com.example.infs3605financialliteracy.Activities.SelectorActivity;
 import com.example.infs3605financialliteracy.Fragments.QuizFragment;
 import com.example.infs3605financialliteracy.Models.User;
 import com.example.infs3605financialliteracy.R;
@@ -59,6 +60,7 @@ public class SimulationFragment extends Fragment {
         dbusers = FirebaseDatabase.getInstance().getReference("users");
         userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         editfunds = view.findViewById(R.id.editfunds);
+        simulations = view.findViewById(R.id.simulations);
 
 
         //Display account balance changes.
@@ -86,6 +88,13 @@ public class SimulationFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), FundsActivity.class));
+            }
+        });
+
+        simulations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), SelectorActivity.class));
             }
         });
 

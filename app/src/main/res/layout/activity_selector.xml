@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Activities.SelectorActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Select a module to play:"
+        android:textColor="@color/colorPrimaryLight"
+        android:fontFamily="monospace"
+        android:textSize="20dp"
+        android:layout_marginTop="100dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="365dp" />
+
+    <Button
+        android:id="@+id/savings"
+        android:layout_width="153dp"
+        android:layout_height="126dp"
+        android:layout_marginRight="5dp"
+        android:text="Savings Accounts"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/investing"
+        android:layout_width="153dp"
+        android:layout_height="126dp"
+        android:text="Investing for Beginners"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <Button
+        android:id="@+id/loans"
+        android:layout_width="153dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="5dp"
+        android:text="Loans"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/taxes"
+        android:layout_width="153dp"
+        android:layout_height="126dp"
+        android:layout_marginRight="5dp"
+        android:text="Managing Taxes"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

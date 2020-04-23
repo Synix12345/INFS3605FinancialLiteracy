@@ -80,11 +80,11 @@
         app:layout_constraintGuide_begin="402dp" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/simulations"
         android:layout_width="400dp"
         android:layout_height="60dp"
         android:text="Simulations"
-
+        android:backgroundTint="@color/colorLightGreen"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
