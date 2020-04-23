@@ -8,19 +8,23 @@
 
     <Button
         android:id="@+id/lesson1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="Superannuation"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/lesson2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/lesson2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="Savings Accounts"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/lesson3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,9 +32,11 @@
 
     <Button
         android:id="@+id/lesson3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="Taxes"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

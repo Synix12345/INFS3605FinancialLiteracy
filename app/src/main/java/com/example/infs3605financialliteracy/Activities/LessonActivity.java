@@ -44,7 +44,72 @@ public class LessonActivity extends AppCompatActivity {
                         "Performance\n" +
                         "Compare your fund's investment performance over at least five years. Consider the impact of fees and tax.\n" +
                         "\n" +
-                        "Compare like with like. For example, only compare a balanced option with another balanced option, and try to use the same time period.\n");
+                        "Compare like with like. For example, only compare a balanced option with another balanced option, and try to use the same time period.\n" +
+                        "\n" +
+                        "Low fees\n" +
+                        "All super funds charge fees. Fees are either a dollar amount or a percentage, or both. Either way, the lower the fees, the better. Fees are usually deducted monthly and also after an action such as switching investments.\n" +
+                        "\n" +
+                        "Insurance\n" +
+                        "Super funds typically have three types of insurance for members:\n" +
+                        "-\tlife (also known as death cover)\n" +
+                        "-\ttotal and permanent disability (TPD)\n" +
+                        "-\tincome protection\n" +
+                        "When comparing the default insurance offered by super funds, look for:\n" +
+                        "-\tthe premium rates\n" +
+                        "-\tthe amount of cover\n" +
+                        "-\tany exclusions or definitions that might affect you\n" +
+                        "Investment options\n" +
+                        "Most super funds let you choose from a range of investment options.\n" +
+                        "\n" +
+                        "Options usually include:\n" +
+                        "\n" +
+                        "-\tgrowth\n" +
+                        "-\tbalanced\n" +
+                        "-\tconservative\n" +
+                        "-\tcash\n" +
+                        "-\tethical\n" +
+                        "-\tMySuper\n" +
+                        "Some funds will let you choose the weighting of different asset types or direct investments.\n" +
+                        "\n" +
+                        "Services\n" +
+                        "Super funds may offer other services which attract special fees. These can be things like financial advice or arranging to split your super following a separation.\n" +
+                        "\n" +
+                        "Compare super funds\n" +
+                        "You can find out about and compare super funds by using:\n" +
+                        "\n" +
+                        "-\tthe product disclosure statement (PDS) for each fund\n" +
+                        "-\tsuper comparison websites\n" +
+                        "-\tComparison websites\n" +
+                        "Super comparison websites include:\n" +
+                        "-\tCanstar\n" +
+                        "-\tChant West\n" +
+                        "-\tMorningstar\n" +
+                        "-\tRateCity\n" +
+                        "-\tSelectingSuper\n" +
+                        "-\tSuperRatings\n" +
+                        "All of these have some information for free. Some of them also offer more detailed information for a fee.\n" +
+                        "\n" +
+                        "Comparison websites can be useful, but they are businesses and may make money through promoted links. They may not cover all your options. See what to keep in mind when using comparison websites.\n" +
+                        "\n" +
+                        "Don't choose a super fund based on its website rating alone.\n" +
+                        "\n" +
+                        "Compare these features:\n" +
+                        "\n" +
+                        "-\tPerformance\n" +
+                        "o\tHow well the fund has performed over the past 5 years\n" +
+                        "-\tFees\n" +
+                        "o\tfees for administration, investment, advice, switching, buy/sell spread, exit\n" +
+                        "o\thow often they are charged\n" +
+                        "-\tInsurance\n" +
+                        "o\twhat cover is available\n" +
+                        "o\thow much it costs\n" +
+                        "-\tInvestment options\n" +
+                        "\n" +
+                        "Work out:\n" +
+                        "-\thow much super you'll have when you retire\n" +
+                        "-\thow fees affect your final payout\n" +
+                        "\n" +
+                        "If you don't (or can't) choose your own super fund, your employer will put your super into a 'default' super account in their fund. This is known as a MySuper account.\n");
                 YouTubeActivity.YOUTUBE_VIDEO = "2xYq9CDqiXE";
                 break;
             case 1:
