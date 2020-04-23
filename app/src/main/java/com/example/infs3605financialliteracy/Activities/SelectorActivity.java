@@ -45,5 +45,13 @@ public class SelectorActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        investing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SelectorActivity.this, InvestingActivity.class));
+                finish();
+            }
+        });
     }
 }
