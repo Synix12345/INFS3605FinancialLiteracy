@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:background="@color/colorGrey"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/loanAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Amount Borrowed"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#1a3262" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Down Payment"
+            android:id="@+id/txtDownPayment"
+            android:layout_below="@+id/loanAmount"
+            android:layout_alignLeft="@+id/loanAmount"
+            android:layout_alignStart="@+id/loanAmount"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="0dp"
+            android:textColor="#1a3262"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Interest Rate"
+            android:id="@+id/txtInterestRate"
+            android:layout_below="@+id/txtDownPayment"
+            android:layout_alignLeft="@+id/txtDownPayment"
+            android:layout_alignStart="@+id/txtDownPayment"
+            android:layout_marginTop="50dp"
+            android:textColor="#1a3262"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Property Tax"
+            android:id="@+id/txtPropertyTax"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/txtTerm"
+            android:layout_alignLeft="@+id/txtTerm"
+            android:layout_alignStart="@+id/txtTerm"
+            android:textColor="#1a3262"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Terms"
+            android:id="@+id/txtTerm"
+            android:layout_below="@+id/txtInterestRate"
+            android:layout_alignLeft="@+id/txtInterestRate"
+            android:layout_alignStart="@+id/txtInterestRate"
+            android:layout_marginTop="50dp" />
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputHomeValue"
+            android:hint="$"
+            android:layout_alignTop="@+id/loanAmount"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-5dp" />
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputDownPayment"
+            android:hint="$"
+            android:layout_alignTop="@+id/txtDownPayment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-5dp" />
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputInterestRate"
+            android:hint="(in %)"
+            android:layout_alignTop="@+id/txtInterestRate"
+            android:layout_alignRight="@+id/inputDownPayment"
+            android:layout_alignEnd="@+id/inputDownPayment"
+            android:layout_marginTop="-5dp" />
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputPropertyTaxRate"
+            android:hint="(in %)"
+            android:layout_alignTop="@+id/txtPropertyTax"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-5dp" />
+
+        <Spinner
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_alignTop="@+id/txtTerm"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputPropertyTaxRate"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
+            >
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/quiz_button_design"
+                android:backgroundTintMode="src_over"
+                android:text="Calculate" />
+
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:background="@drawable/quiz_button_design"
+                android:id="@+id/resetButton" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
