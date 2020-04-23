@@ -4,32 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/greengradient"
     tools:context=".Activities.SavingsActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:fontFamily="monospace"
+        android:layout_marginTop="52dp"
         android:text="Accounts"
         android:textColor="@color/colorPrimaryLight"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/accountrecycler"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:background="@color/colorPrimaryLight"
+        android:layout_height="470dp"
         android:scrollbars="vertical"
+        android:layout_marginTop="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Main Account Available:"
+        android:textStyle="normal"
+        app:layout_constraintHorizontal_bias="0.10"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/mainbalance"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="10dp"
+        android:text="..."
+        app:layout_constraintStart_toEndOf="@id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/accountrecycler"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="110dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/cardicon"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="117dp" />
+
+    <ImageButton
+        android:id="@+id/addacc"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/plusicon"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/accountrecycler"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
