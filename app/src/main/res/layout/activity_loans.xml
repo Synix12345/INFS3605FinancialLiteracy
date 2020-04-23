@@ -1,153 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="30dp"
-        android:background="@color/colorGrey"
-        tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="650dp"
+        android:text="Welcome to our Loan Calculator"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/loanAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="84dp"
+        android:text="Loan Amount ($)"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        <TextView
-            android:id="@+id/loanAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Amount Borrowed"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#1a3262" />
+    <TextView
+        android:id="@+id/interestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:text="Interest Rate (%)"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@id/loanAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loanAmount" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Down Payment"
-            android:id="@+id/txtDownPayment"
-            android:layout_below="@+id/loanAmount"
-            android:layout_alignLeft="@+id/loanAmount"
-            android:layout_alignStart="@+id/loanAmount"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="0dp"
-            android:textColor="#1a3262"/>
+    <TextView
+        android:id="@+id/loanLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:text="Length of Loan (Yrs)"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@id/loanAmount"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestRate" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Interest Rate"
-            android:id="@+id/txtInterestRate"
-            android:layout_below="@+id/txtDownPayment"
-            android:layout_alignLeft="@+id/txtDownPayment"
-            android:layout_alignStart="@+id/txtDownPayment"
-            android:layout_marginTop="50dp"
-            android:textColor="#1a3262"/>
+    <TextView
+        android:id="@+id/paymentFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:textStyle="bold|italic"
+        android:text="Payment Frequency"
+        app:layout_constraintEnd_toEndOf="@id/loanAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loanLength" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Property Tax"
-            android:id="@+id/txtPropertyTax"
-            android:layout_marginTop="50dp"
-            android:layout_below="@+id/txtTerm"
-            android:layout_alignLeft="@+id/txtTerm"
-            android:layout_alignStart="@+id/txtTerm"
-            android:textColor="#1a3262"/>
+    <EditText
+        android:id="@+id/loan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/loanAmount"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Terms"
-            android:id="@+id/txtTerm"
-            android:layout_below="@+id/txtInterestRate"
-            android:layout_alignLeft="@+id/txtInterestRate"
-            android:layout_alignStart="@+id/txtInterestRate"
-            android:layout_marginTop="50dp" />
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/interestRate"
+        app:layout_constraintTop_toBottomOf="@+id/loan" />
 
-        <EditText
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/inputHomeValue"
-            android:hint="$"
-            android:layout_alignTop="@+id/loanAmount"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-5dp" />
+    <EditText
+        android:id="@+id/length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/loanLength"
+        app:layout_constraintTop_toBottomOf="@+id/rate" />
 
-        <EditText
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/inputDownPayment"
-            android:hint="$"
-            android:layout_alignTop="@+id/txtDownPayment"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-5dp" />
+    <Spinner
+        android:id="@+id/frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/paymentFrequency"
+        app:layout_constraintTop_toBottomOf="@+id/length" />
 
-        <EditText
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/inputInterestRate"
-            android:hint="(in %)"
-            android:layout_alignTop="@+id/txtInterestRate"
-            android:layout_alignRight="@+id/inputDownPayment"
-            android:layout_alignEnd="@+id/inputDownPayment"
-            android:layout_marginTop="-5dp" />
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="188dp"
+        android:text="Repayment Amount"
+        app:layout_constraintBottom_toBottomOf="@id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frequency"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <EditText
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/inputPropertyTaxRate"
-            android:hint="(in %)"
-            android:layout_alignTop="@+id/txtPropertyTax"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-5dp" />
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="149dp"
+        android:text="Calculate"
+        android:background="@drawable/quiz_button_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frequency" />
 
-        <Spinner
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:layout_alignTop="@+id/txtTerm"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-10dp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="68dp"
+        android:text="Your repayments are: "
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/inputPropertyTaxRate"
-            android:layout_marginTop="100dp"
-            android:gravity="center_horizontal"
-            >
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:text="Your total interest is: "
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-            <Button
-                android:id="@+id/calculateButton"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/quiz_button_design"
-                android:backgroundTintMode="src_over"
-                android:text="Calculate" />
+    <TextView
+        android:id="@+id/interestPayable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Total Interest Payable"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmount" />
 
-            <Button
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:text="Reset"
-                android:background="@drawable/quiz_button_design"
-                android:id="@+id/resetButton" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="29dp"
+        android:textStyle="bold|italic"
+        android:text="Total Loan Amount is: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/totalPayableAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="29dp"
+        android:text="Total Payable"
+        app:layout_constraintBottom_toBottomOf="@id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
 
-    </RelativeLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
