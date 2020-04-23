@@ -89,13 +89,6 @@ public class SimulationFragment extends Fragment {
             }
         });
 
-        simulations.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
         return view;
     }
 }
