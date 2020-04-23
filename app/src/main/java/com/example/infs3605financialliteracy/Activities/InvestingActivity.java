@@ -23,7 +23,7 @@ public class InvestingActivity extends AppCompatActivity {
     Button calcbutton;
     double startingbalance,interestrate,monthlysavings,endingbalance,interestPrinciple,futurevalue;
     int years;
-    private static DecimalFormat df2 = new DecimalFormat("#.##");
+
 
 
     @Override
@@ -59,7 +59,7 @@ public class InvestingActivity extends AppCompatActivity {
                 endingbalance=futurevalue+interestPrinciple;
 
 
-                Tendingbalance.setText(String.format("%.2f", endingbalance));
+                Tendingbalance.setText(String.format("$%.2f", endingbalance));
 
             }
 

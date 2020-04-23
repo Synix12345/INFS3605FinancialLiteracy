@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/darkgreengradient"
     tools:context=".Activities.InvestingActivity">
 
     <LinearLayout
@@ -11,49 +12,92 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Personal Savings Calculator"
+            android:textAlignment="center"
+            android:textColor="#009688"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/startingbalance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Starting Balance"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/monthlysavings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Monthly Savings"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/intrate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Interest Rate (Annual in Decimal)"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/years"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Years"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/endingbalance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
             android:text="Total Savings"
-            android:textSize="24sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
 
         <Button
             android:id="@+id/btn_calc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#688C4C"
             android:text="Calculate" />
 
     </LinearLayout>
