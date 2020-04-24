@@ -1,12 +1,15 @@
 package com.example.infs3605financialliteracy.Activities;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.infs3605financialliteracy.R;
@@ -63,7 +66,26 @@ public class InvestingActivity extends AppCompatActivity {
 
             }
 
+
+
         }));
+
+        ImageButton more = findViewById(R.id.btn_info);
+        more.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+
+
+                AlertDialog alertDialog = new AlertDialog.Builder(InvestingActivity.this).create();
+                alertDialog.setTitle("How The Calculator Works");
+                alertDialog.setMessage("The calculator calculates the total savings that you will receive by computing the compound interest of two parts: the principal amount (starting balance), and the future value of a series (monthly savings) over the number of years indicated. It then adds up these two values, resulting in the Total Savings. It is assumed that the deposits are added at the end of the month. ");
+
+//
+
+                alertDialog.show();
+            }
+
+        });
 
 
     }
