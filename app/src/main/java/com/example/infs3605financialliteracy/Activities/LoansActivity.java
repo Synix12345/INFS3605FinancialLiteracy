@@ -5,10 +5,12 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.infs3605financialliteracy.R;
@@ -35,6 +37,8 @@ public class LoansActivity extends AppCompatActivity {
         frequency = findViewById(R.id.frequency);
         interestPayable = findViewById(R.id.interestPayable);
         totalPayableAmount = findViewById(R.id.totalPayableAmount);
+
+
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.spinner_array, android.R.layout.simple_spinner_dropdown_item);
@@ -69,6 +73,19 @@ public class LoansActivity extends AppCompatActivity {
                 totalPayableAmount.setText(String.valueOf(Total));
             }
         });
+
+        ImageButton more = findViewById(R.id.btn_info);
+        more.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                AlertDialog alertDialog = new AlertDialog.Builder(LoansActivity.this).create();
+                alertDialog.setTitle("Payment Frequency Help");
+                alertDialog.setMessage("A Payment Frequency of 52 means the repayments are carried out weekly \n\nA Payment Frequency of 26 means the repayments are carried out fortnightly \n\nA Payment Frequency of 12 means the repayments are carried out monthly \n\nA Payment Frequency of 4 means the repayments are carried out quarterly \n\nA Payment Frequency of 1 means the repayments are carried out yearly");
+                alertDialog.show();
+            }
+
+        });
+
+
     }
 
 
