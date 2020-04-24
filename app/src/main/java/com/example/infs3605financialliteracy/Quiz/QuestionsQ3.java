@@ -8,7 +8,8 @@ public class QuestionsQ3 {
             "What is the term used to describe the tax paid on a person’s last dollar of income?",
             "What is not a taxable deduction?",
             "Who is in charge of handling and updating Tax Affairs in Australia?",
-            "What is the typical deadline for lodgement of your Income Tax Return, if lodging yourself?"
+            "What is the typical deadline for lodgement of your Income Tax Return, if lodging yourself?",
+            "What is a regressive tax?"
     };
 
     private String mChoices[][] = {
@@ -17,7 +18,8 @@ public class QuestionsQ3 {
             {"Marginal tax rate","Adjusted gross tax rate","Average tax rate","Total tax rate"},
             {"Personal Groceries", "Work-related expenses", "Self-education expenses", "Cost of managing your Tax Affairs"},
             {"Aussie Affairs","Australian Taxable Board","Australian Taxation Office","Australian Tax Network"},
-            {"31st July","31st October","30th September","15th May"}
+            {"31st July","31st October","30th September","15th May"},
+            {"Tax where the dollar value is the same regardless of level of income", "Tax that increases with your income", "Tax that can be paid at a later date", "None of the above"}
     };
 
     private String mCorrectAnswers[] = {
@@ -26,7 +28,8 @@ public class QuestionsQ3 {
             "Marginal tax rate",
             "Personal Groceries",
             "Australian Taxation Office",
-            "31st October"
+            "31st October",
+            "Tax where the dollar value is the same regardless of level of income"
     };
 
     public String getQuestion(int a) {

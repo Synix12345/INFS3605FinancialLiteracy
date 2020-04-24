@@ -47,8 +47,8 @@
         android:id="@+id/investing"
         android:layout_width="153dp"
         android:layout_height="126dp"
-        android:text="Investing for Beginners"
         android:layout_marginLeft="5dp"
+        android:text="Savings Calculator"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 

@@ -8,7 +8,12 @@ public class QuestionsQ1 {
             "What is the easiest way to consolidate multiple super accounts to avoid paying multiple fees?",
             "Which of the following statements is correct?",
             "Which of the following is a benefit of super?",
-            "Which of the following conditions of release allows super to be accessed?"
+            "Which of the following conditions of release allows super to be accessed?",
+            "There are two phases of Superannuation, these are:",
+            "What are three examples of the types of Super Funds that are available to you:",
+            "Salary Sacrificing to Superannuation can be summarised as:",
+            "If you were eligible for the full government co-contribution what would your co-contribution be if you contributed $500 into super from your own cash?",
+            "The tax rate on earnings within an Account Based Pension is:"
     };
 
     private String mChoices[][] = {
@@ -17,7 +22,13 @@ public class QuestionsQ1 {
             {"Creating a myGov account, linking it to the Australian Taxation Office, and consolidating your accounts","There is no easy way","You cannot consolidate multiple super accounts","None of the above"},
             {"All super funds charge the same fees", "Super funds are required to disclose their total fees and charges in their product disclosure statement (PDS) and in your annual member statement", "Super funds do not charge fees", "None of the above"},
             {"Everyone who contributes to super is eligible for a government co-contribution of the same amount","Once you retire on or after your 60th birthday, you can generally withdraw your super funds tax-free","Both of the above","None of the above"},
-            {"The First Home Super Saver Scheme","Severe financial hardship","Retirement after reaching your preservation age","All of the above"}
+            {"The First Home Super Saver Scheme","Severe financial hardship","Retirement after reaching your preservation age","All of the above"},
+            {"Working and Non-Working", "Industry Fund and Pension Fund", "Accumulation and Pension", "Concessional and Non-Concessional"},
+            {"Industry Fund, Retail Fund and Lump Sum Fund", "Industry Fund, Retail Fund and Corporate Fund", "Self Managed Super Fund, Pension Fund and Accumulation Fund", "Australian Share Fund, Property Fund and Corporate Fund"},
+            {"Sacrificing fees to gain better performance", "Using your salary to find the appropriate super fund", "Contributing money to your super from your bank account after tax has been deducted.", "Where you reduce your salary by a certain amount and the amount is contributed to superannuation, before income tax is deducted."},
+            {"$250", "$500", "$1,000", "$2,000"},
+            {"15%", "10%", "31.5%", "0%"}
+
     };
 
     private String mCorrectAnswers[] = {
@@ -26,7 +37,12 @@ public class QuestionsQ1 {
             "Creating a myGov account, linking it to the Australian Taxation Office, and consolidating your accounts",
             "Super funds are required to disclose their total fees and charges in their product disclosure statement (PDS) and in your annual member statement",
             "Once you retire on or after your 60th birthday, you can generally withdraw your super funds tax-free",
-            "All of the above"
+            "All of the above",
+            "Accumulation and Pension",
+            "Industry Fund, Retail Fund and Corporate Fund",
+            "Where you reduce your salary by a certain amount and the amount is contributed to superannuation, before income tax is deducted.",
+            "$250",
+            "0%"
     };
 
     public String getQuestion(int a) {
