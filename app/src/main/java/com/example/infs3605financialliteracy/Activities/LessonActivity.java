@@ -177,7 +177,7 @@ public class LessonActivity extends AppCompatActivity {
 
                         );
                 YouTubeActivity.YOUTUBE_VIDEO = "jY3_w3bwt3M";
-                textViewT.setText("Savigns Accounts");
+                textViewT.setText("Savings Accounts");
                 break;
             case 2:
                 textView.setText("When you earn money from work or investments, you usually have to pay tax on your income.\n" +
