@@ -2,6 +2,7 @@ package com.example.infs3605financialliteracy.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -73,10 +74,13 @@ public class SavingsActivity extends AppCompatActivity {
 
         //Add another account button
         addAcc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SavingsActivity.this, NewAccountActivity.class));
+            public void onClick(View view) {
+                AlertDialog alertDialog = new AlertDialog.Builder(SavingsActivity.this).create();
+                alertDialog.setTitle("Coming Soon");
+                alertDialog.setMessage("Due to unforeseen circumstances, the functionality of this section of the app will appear in future updates!");
+                alertDialog.show();
             }
+
         });
 
         //Fetch current main balance

@@ -1,6 +1,7 @@
 package com.example.infs3605financialliteracy.Activities;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -52,6 +53,22 @@ public class SelectorActivity extends AppCompatActivity {
                 startActivity(new Intent(SelectorActivity.this, InvestingActivity.class));
                 finish();
             }
+        });
+
+        taxes.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+
+
+                AlertDialog alertDialog = new AlertDialog.Builder(SelectorActivity.this).create();
+                alertDialog.setTitle("Coming Soon");
+                alertDialog.setMessage("This section will be coming soon in future updates!");
+
+//
+
+                alertDialog.show();
+            }
+
         });
     }
 }
