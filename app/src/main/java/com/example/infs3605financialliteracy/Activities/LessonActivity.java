@@ -18,6 +18,7 @@ public class LessonActivity extends AppCompatActivity {
 
     TextView textView;
     Button btnVid;
+    TextView textViewT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class LessonActivity extends AppCompatActivity {
 
 
         textView = findViewById(R.id.tv_info);
+        textViewT = findViewById(R.id.tv_title);
         textView.setMovementMethod(new ScrollingMovementMethod());
         btnVid = findViewById(R.id.btn_vid);
 
@@ -111,6 +113,7 @@ public class LessonActivity extends AppCompatActivity {
                         "\n" +
                         "If you don't (or can't) choose your own super fund, your employer will put your super into a 'default' super account in their fund. This is known as a MySuper account.\n");
                 YouTubeActivity.YOUTUBE_VIDEO = "2xYq9CDqiXE";
+                textViewT.setText("Superannuation");
                 break;
             case 1:
                 textView.setText("Interest rates on savings accounts are at record lows these days, so you’ll be hard pressed to find an interest rate that’s permanently above 3% per annum.\n" +
@@ -174,6 +177,7 @@ public class LessonActivity extends AppCompatActivity {
 
                         );
                 YouTubeActivity.YOUTUBE_VIDEO = "jY3_w3bwt3M";
+                textViewT.setText("Savigns Accounts");
                 break;
             case 2:
                 textView.setText("When you earn money from work or investments, you usually have to pay tax on your income.\n" +
@@ -266,6 +270,7 @@ public class LessonActivity extends AppCompatActivity {
                         "\n" +
                         "See lodging your tax return on the ATO website for information about preparing your annual return.\n");
                 YouTubeActivity.YOUTUBE_VIDEO = "FeqwZwQcrj8";
+                textViewT.setText("Taxes");
                 break;
 
         }
