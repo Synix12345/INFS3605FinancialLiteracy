@@ -1,45 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    android:background="@drawable/darkgreengradient"
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/lesson1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Superannuation"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@id/lesson2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/lesson2"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Savings Accounts"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@id/lesson3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson1" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Learning Topics"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/lesson3"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Taxes"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson2" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/iconblacktext" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/lesson1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_design1"
+            android:text="Superannuation"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/lesson2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_design1"
+            android:text="Savings Accounts"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/lesson3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/button_design1"
+            android:text="Taxes"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</RelativeLayout>

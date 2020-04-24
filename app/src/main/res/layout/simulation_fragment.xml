@@ -83,12 +83,12 @@
         android:id="@+id/simulations"
         android:layout_width="200dp"
         android:layout_height="60dp"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:text="Simulations"
         android:textColor="@color/colorPrimaryLight"
-        android:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
 
